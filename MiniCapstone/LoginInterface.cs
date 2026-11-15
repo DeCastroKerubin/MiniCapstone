@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MiniCapstone
 {
-    public partial class Form1 : Form
+    public partial class LoginInterface : Form
     {
-        public Form1()
+        public LoginInterface()
         {
             InitializeComponent();
         }
