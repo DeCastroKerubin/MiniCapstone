@@ -139,7 +139,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::MiniCapstone.Properties.Resources.wo;
+            this.pictureBox1.BackgroundImage = global::MiniCapstone.Properties.Resources.LOGOLOST_1_;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(439, 0);
             this.pictureBox1.Name = "pictureBox1";

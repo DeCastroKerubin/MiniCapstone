@@ -63,9 +63,9 @@ namespace MiniCapstone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap wo {
+        internal static System.Drawing.Bitmap LOGOLOST_1_ {
             get {
-                object obj = ResourceManager.GetObject("wo", resourceCulture);
+                object obj = ResourceManager.GetObject("LOGOLOST(1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
