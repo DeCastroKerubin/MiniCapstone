@@ -153,6 +153,7 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseConnections.cs" />
     <Compile Include="LoginInterface.cs">
       <SubType>Form</SubType>
     </Compile>

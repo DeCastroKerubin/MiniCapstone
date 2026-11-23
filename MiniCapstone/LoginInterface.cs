@@ -14,29 +14,10 @@ namespace MiniCapstone
 {
     public partial class LoginInterface : Form
     {
-        private IMongoClient client;
-        private IMongoDatabase database;
-        private IMongoCollection<BsonDocument> staffCollection;
-
-        private void ConnectToDatabase()
-        {
-            string connectionString = "mongodb+srv://Staff:staffstaff@lostandfoun.dxpwfue.mongodb.net/";
-
-            client = new MongoClient(connectionString);
-            database = client.GetDatabase("LostAndFound");
-            staffCollection = database.GetCollection<BsonDocument>("StaffLogin");
-        }
+        private DatabaseConnections dbConnection = new DatabaseConnections();
         public LoginInterface()
         {
             InitializeComponent();
-            ConnectToDatabase();
-            database.RunCommand<BsonDocument>(new BsonDocument("ping", 1)
-);
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -45,7 +26,7 @@ namespace MiniCapstone
             string password = txtBoxPassword.Text;
 
             var filter = Builders<BsonDocument>.Filter.And(Builders<BsonDocument>.Filter.Eq("Username", username),Builders<BsonDocument>.Filter.Eq("Password", password));
-            var staff = staffCollection.Find(filter).FirstOrDefault();
+            var staff = dbConnection.StaffCollection.Find(filter).FirstOrDefault();
 
             if (staff != null)
             {
@@ -58,5 +39,27 @@ namespace MiniCapstone
                 MessageBox.Show("Invalid credentials, please try again.");
             }
         }
-    }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+		private bool isPasswordShown = false;
+		private void pbShowPass_Click(object sender, EventArgs e)
+		{
+			if (isPasswordShown)
+			{
+				txtBoxPassword.UseSystemPasswordChar = true;
+				pbShowPass.Image = Properties.Resources.eyeclosed;
+				isPasswordShown = false;
+			}
+			else
+			{
+				txtBoxPassword.UseSystemPasswordChar = false;
+				pbShowPass.Image = Properties.Resources.eyeopen;
+				isPasswordShown = true;
+			}
+		}
+	}
 }
