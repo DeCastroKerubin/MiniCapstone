@@ -44,5 +44,22 @@ namespace MiniCapstone
         {
             Application.Exit();
         }
-    }
+
+		private bool isPasswordShown = false;
+		private void pbShowPass_Click(object sender, EventArgs e)
+		{
+			if (isPasswordShown)
+			{
+				txtBoxPassword.UseSystemPasswordChar = true;
+				pbShowPass.Image = Properties.Resources.eyeclosed;
+				isPasswordShown = false;
+			}
+			else
+			{
+				txtBoxPassword.UseSystemPasswordChar = false;
+				pbShowPass.Image = Properties.Resources.eyeopen;
+				isPasswordShown = true;
+			}
+		}
+	}
 }
