@@ -34,14 +34,14 @@
 			this.txtBoxPassword = new ReaLTaiizor.Controls.BigTextBox();
 			this.btnExit = new System.Windows.Forms.Button();
 			this.panel1 = new ReaLTaiizor.Controls.Panel();
-			this.dungeonLabel1 = new ReaLTaiizor.Controls.DungeonLabel();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.pbShowPass = new System.Windows.Forms.PictureBox();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
+			this.dungeonLabel1 = new ReaLTaiizor.Controls.DungeonLabel();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.panel1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pbShowPass)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// btnLogin
@@ -137,6 +137,28 @@
 			this.panel1.TabIndex = 11;
 			this.panel1.Text = "panel1";
 			// 
+			// pbShowPass
+			// 
+			this.pbShowPass.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.pbShowPass.Image = global::MiniCapstone.Properties.Resources.eyeclosed;
+			this.pbShowPass.Location = new System.Drawing.Point(527, 692);
+			this.pbShowPass.Name = "pbShowPass";
+			this.pbShowPass.Size = new System.Drawing.Size(74, 42);
+			this.pbShowPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pbShowPass.TabIndex = 9;
+			this.pbShowPass.TabStop = false;
+			this.pbShowPass.Click += new System.EventHandler(this.pbShowPass_Click);
+			// 
+			// pictureBox2
+			// 
+			this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+			this.pictureBox2.Location = new System.Drawing.Point(63, 189);
+			this.pictureBox2.Name = "pictureBox2";
+			this.pictureBox2.Size = new System.Drawing.Size(530, 403);
+			this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pictureBox2.TabIndex = 8;
+			this.pictureBox2.TabStop = false;
+			// 
 			// dungeonLabel1
 			// 
 			this.dungeonLabel1.AutoSize = true;
@@ -161,28 +183,6 @@
 			this.pictureBox1.TabIndex = 12;
 			this.pictureBox1.TabStop = false;
 			// 
-			// pbShowPass
-			// 
-			this.pbShowPass.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.pbShowPass.Image = global::MiniCapstone.Properties.Resources.eyeclosed;
-			this.pbShowPass.Location = new System.Drawing.Point(527, 692);
-			this.pbShowPass.Name = "pbShowPass";
-			this.pbShowPass.Size = new System.Drawing.Size(74, 42);
-			this.pbShowPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pbShowPass.TabIndex = 9;
-			this.pbShowPass.TabStop = false;
-			this.pbShowPass.Click += new System.EventHandler(this.pbShowPass_Click);
-			// 
-			// pictureBox2
-			// 
-			this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-			this.pictureBox2.Location = new System.Drawing.Point(63, 189);
-			this.pictureBox2.Name = "pictureBox2";
-			this.pictureBox2.Size = new System.Drawing.Size(530, 403);
-			this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.pictureBox2.TabIndex = 8;
-			this.pictureBox2.TabStop = false;
-			// 
 			// LoginInterface
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -202,9 +202,9 @@
 			this.Text = "LoginInterface";
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pbShowPass)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 
         }
