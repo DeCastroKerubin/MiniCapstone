@@ -17,7 +17,7 @@ namespace MiniCapstone
 
         public DatabaseConnections()
         {
-            string connectionString = "mongodb+srv://Staff:staffstaff@lostandfoun.dxpwfue.mongodb.net/";
+            string connectionString = "mongodb+srv://Staff:stafflogin@capstone.pvhlnjd.mongodb.net/";
 
             client = new MongoClient(connectionString);
             database = client.GetDatabase("LostAndFound");
